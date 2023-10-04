@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculator"
+version = "1.0.0"
+description = "the package is mainly used to try out testing and github workflows"
+requires-python = ">=3.7"
+
+[project.scripts]
+add = "calculator.addition_package.__main__:main"
+mul = "calculator.multiplication_package.__main__:main"
