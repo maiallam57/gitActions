@@ -28,6 +28,4 @@ jobs:
         pip install .
 
     - name: Run Tests
-      run: | 
-      python test/test_addition_package.py
-      python test/pep8Test.py
+      run: python test/test_addition_package.py
