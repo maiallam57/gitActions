@@ -6,6 +6,19 @@ on:
   pull_request:
     branches: ["master"]
 
+
+repos:
+- repo: https://github.com/psf/black
+    rev: stable
+    hooks:
+    - id: black
+      language_version: python3.6
+- repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+    - id: flake8
+
+    
 jobs:
   test:
     runs-on: ${{ matrix.os }}
@@ -29,3 +42,5 @@ jobs:
 
     - name: Run Tests
       run: python test/test_addition_package.py
+
+

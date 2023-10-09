@@ -11,3 +11,20 @@ requires-python = ">=3.7"
 [project.scripts]
 add = "calculator.addition_package.__main__:main"
 mul = "calculator.multiplication_package.__main__:main"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
