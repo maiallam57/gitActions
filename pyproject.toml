@@ -11,6 +11,7 @@ requires-python = ">=3.7"
 [project.scripts]
 add = "calculator.addition_package.__main__:main"
 mul = "calculator.multiplication_package.__main__:main"
+main = "main"
 
 [tool.black]
 line-length = 79
