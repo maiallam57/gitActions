@@ -43,4 +43,10 @@ jobs:
     - name: Run Tests
       run: python test/test_addition_package.py
 
-
+    steps:
+        - uses: actions/checkout@v1
+        - name: Build & Push Image
+          run: |
+            echo "${{ secrets.DockerPW }}" | docker login -u "maiallam57" --password-stdin
+            docker image build -t maiallam57/my_first_repo:latest .
+            docker push maiallam57/my_first_repo:latest
